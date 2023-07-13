@@ -1,16 +1,22 @@
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-import { getAuth , createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
-const firebaseConfig = {
-  apiKey: "AIzaSyBzU3W1aY0lPl6vd9jzxBmM8gKVMVHcTsc",
-  authDomain: "file-store-9ebe4.firebaseapp.com",
-  projectId: "file-store-9ebe4",
-  storageBucket: "file-store-9ebe4.appspot.com",
-  messagingSenderId: "500064140759",
-  appId: "1:500064140759:web:0a73de09967c990c2c1f92"
-};
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+  
+  const firebaseConfig = {
+    apiKey: "AIzaSyBzU3W1aY0lPl6vd9jzxBmM8gKVMVHcTsc",
+    authDomain: "file-store-9ebe4.firebaseapp.com",
+    projectId: "file-store-9ebe4",
+    storageBucket: "file-store-9ebe4.appspot.com",
+    messagingSenderId: "500064140759",
+    appId: "1:500064140759:web:0a73de09967c990c2c1f92"
+  };
+
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
 
 
 
@@ -29,6 +35,8 @@ register.addEventListener("click", ()=>{
         email : email.value,
         password : password.value
     }
+    console.log(user);
+ 
 
 
     createUserWithEmailAndPassword(auth, user.email, user.password)
